@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAA 2025 Compliance Timeline</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/script.js"></script>
+    <script>
+        function highlightCurrentYear(year) {
+            document.querySelectorAll('.timeline-labels span').forEach(span => {
+                if (span.dataset.year === year.toString()) {
+                    span.style.color = '#000';
+                    span.style.fontWeight = 'bold';
+                } else {
+                    span.style.color = '#555';
+                    span.style.fontWeight = '500';
+                }
+            });
+        }
+
+        function updateTimeline() {
+            const timelineData = {
+                2023: "<strong>2023:</strong> The European Commission releases official guidelines and technical standards for the EAA. These documents outline the requirements digital services must meet to comply with accessibility laws. Businesses begin to assess the impact and plan their adaptation strategies.<br><br>Organizations providing digital services start consultations with accessibility experts to understand the technical changes needed. The focus is on ensuring early compliance to avoid legal risks.<br><br>Many companies begin internal audits and accessibility training programs to educate their teams on WCAG 2.1/2.2 standards.",
+                2025: "<strong>2025:</strong> June 28 marks the official compliance date for new digital services. From this day forward, all new websites, apps, and digital services launched in the EU must fully adhere to WCAG 2.1/2.2 AA standards to ensure accessibility for people with disabilities.<br><br>Regulators in EU member states begin monitoring compliance, performing random audits, and responding to complaints. Organizations that fail to meet requirements risk enforcement actions, which may include fines or operational restrictions.<br><br>Businesses launching new digital services integrate accessibility into their design and development processes, ensuring compliance from the ground up rather than retrofitting later.",
+                2027: "<strong>2027:</strong> This year serves as a critical midpoint review for existing digital services. Companies that were operational before 2025 should now be at least halfway through their compliance adaptation to meet the 2030 deadline.<br><br>Industry watchdogs and consumer advocacy groups assess compliance progress and highlight common areas where organizations are still failing to meet accessibility standards.<br><br>Businesses refine their accessibility implementation plans, updating their roadmaps based on feedback, evolving technology, and best practices to ensure full compliance by 2030.",
+                2030: "<strong>2030:</strong> June 28 is the final deadline for all existing digital services to be fully compliant with EAA accessibility requirements. Websites, applications, and other digital services that predate 2025 must now conform to WCAG 2.1/2.2 AA standards.<br><br>Regulators across the EU enforce compliance by conducting audits and responding to complaints from users who experience accessibility barriers. Organizations that are found non-compliant may face legal penalties or forced remediation orders.<br><br>Companies solidify their ongoing accessibility strategies, ensuring that compliance remains a continuous effort rather than a one-time adjustment. Periodic audits and user feedback mechanisms become standard practices in digital service maintenance.",
+                2035: "<strong>2035:</strong> A decade after the EAA was first enforced, accessibility is now a fully integrated standard across digital industries. Future revisions to WCAG and accessibility laws are expected, requiring businesses to remain adaptable.<br><br>Technology advancements such as AI-driven accessibility tools, voice navigation, and more refined screen reader compatibility continue to shape the digital accessibility landscape.<br><br>EU regulators and accessibility organizations begin reviewing the impact of the EAA and considering potential updates to improve inclusivity and address new challenges posed by emerging technologies."
+            };
+            
+            let slider = document.getElementById("timelineSlider");
+            let output = document.getElementById("timelineOutput");
+            let year = slider.value;
+            
+            if (timelineData[year]) {
+                output.innerHTML = timelineData[year];
+            } else {
+                output.innerHTML = `<strong>${year}:</strong> No significant updates.`;
+            }
+
+            highlightCurrentYear(year);
+        }
+    </script>
+</head>
+<body onload="updateTimeline()">
+    <div class="container">
+        <h1>EAA 2025 Compliance Timeline</h1>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="standards.html">Standards</a>
+            <a href="brexit.html">Brexit & UK</a>
+            <a href="challenges.html">Challenges</a>
+            <a href="compliance.html">Compliance</a>
+            <a href="legal.html">Legal</a>
+        </div>
+        <div class="timeline-container">
+            <h3>Drag to explore the EAA timeline</h3>
+            <input type="range" min="2023" max="2035" step="1" value="2025" class="timeline-slider" id="timelineSlider" oninput="updateTimeline()">
+            <div class="timeline-labels">
+                <span data-year="2023">2023</span>
+                <span data-year="2025">2025</span>
+                <span data-year="2027">2027</span>
+                <span data-year="2030">2030</span>
+                <span data-year="2035">2035</span>
+            </div>
+            <div class="timeline-box" id="timelineOutput"></div>
+        </div>
+    </div>
+</body>
+</html>

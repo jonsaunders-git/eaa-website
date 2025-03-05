@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e0e0e0;
+    color: #333;
+    margin: 0;
+    padding: 40px 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 10%, rgba(255, 255, 255, 1) 50%, #fff 50%), 
+                url('../images/index.webp') no-repeat center top;
+    background-size: cover;
+}
+h1 {
+    color: #222;
+    font-weight: 600;
+    font-size: 2.2em;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.nav a {
+    background: linear-gradient(135deg, #444, #777);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.nav a:hover {
+    background: linear-gradient(135deg, #222, #555);
+    transform: scale(1.05);
+}
+/* Callout styles with improved spacing and appearance */
+.callout {
+    background: #f8f8f8;
+    padding: 15px 20px;
+    border-left: 5px solid #444;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add positioning context for the button */
+    min-height: 60px; /* Ensure enough height */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px; /* Add space between elements */
+}
+
+/* Style headers within callouts */
+.callout h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+/* Style paragraphs within callouts */
+.callout p {
+    margin: 0 0 8px 0; /* Reduce bottom margin */
+    line-height: 1.5;
+}
+
+/* Position the "More" button */
+.callout .more-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    background: #555;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: all 0.2s ease;
+}
+
+.callout .more-btn:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+/* Link styling within callouts */
+.callout a {
+    color: #2a4dad;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.callout a:hover {
+    text-decoration: underline;
+    color: #18366f;
+}
+.accordion {
+    text-align: left;
+    max-width: 750px;
+    margin: auto;
+}
+.accordion-item {
+    background: #f8f8f8;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+.accordion-header {
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #555, #777);
+    color: white;
+}
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background: white;
+}
+.summary-box {
+    background: linear-gradient(135deg, #2a4dad, #18366f);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    box-shadow: 0 10px 25px rgba(42, 77, 173, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Add subtle pattern overlay */
+.summary-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Style paragraphs within summary boxes */
+.summary-box p {
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    line-height: 1.6;
+    font-size: 1.05em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Add subtle accent element */
+.summary-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #4A90E2, #2a4dad, #18366f);
+    opacity: 0.8;
+}
+
+/* Make links in summary boxes more visible */
+.summary-box a {
+    color: #a9c6ff;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+    transition: all 0.2s ease;
+}
+
+.summary-box a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+ul {
+    text-align: left;
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    background: linear-gradient(135deg, #f8f9ff, #e8eafd);
+    padding: 15px 20px 15px 45px;
+    margin: 12px 0;
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+ul li:hover {
+    transform: translateX(5px);
+    background: linear-gradient(135deg, #e8eafd, #d8dafd);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+ul li::before {
+    content: '•';
+    position: absolute;
+    left: 20px;
+    color: #555;
+    font-size: 1.5em;
+    line-height: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* For nested lists */
+ul ul {
+    margin: 10px 0 5px 0;
+}
+ul ul li {
+    background: linear-gradient(135deg, #ffffff, #f5f6fe);
+    margin: 8px 0;
+    padding: 12px 20px 12px 40px;
+}
+ul ul li::before {
+    content: '◦';
+    font-size: 1.2em;
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    margin: 40px auto; /* Additional top/bottom spacing */
+    padding: 0 12px;
+    max-width: 800px;  /* Wider container for better spacing */
+}
+
+/* Slider */
+.timeline-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ddd;
+    height: 8px;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+    margin: 60px 0 30px; /* Increase top margin for labels, reduce bottom for spacing */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider Thumb Hover */
+.timeline-slider:hover {
+    background: #888;
+}
+
+.timeline-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #555, #777);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+.timeline-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #555, #777);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    border: none;
+}
+.timeline-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #444, #666);
+}
+.timeline-slider::-moz-range-thumb:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #444, #666);
+}
+
+/* Timeline Labels */
+.timeline-labels {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    margin-top: -10px;   /* Bring labels closer to slider without overlapping */
+    margin-bottom: 40px; /* Space between labels and timeline box */
+    z-index: 2;          /* Ensure labels are on top */
+}
+
+/* Position each year label based on slider steps from 2023 to 2035 (12 steps) */
+.timeline-labels span {
+    position: absolute;
+    transform: translateX(-50%);
+    color: #555;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* 
+   Years: 2023 (start) => 0%
+          2025 => 2 of 12 steps => 16.6667%
+          2027 => 4 of 12 steps => 33.3333%
+          2030 => 7 of 12 steps => 58.3333%
+          2035 => 12 of 12 steps => 100%
+*/
+.timeline-labels span:nth-child(1) { left: 1.5%; }         /* 2023 */
+.timeline-labels span:nth-child(2) { left: 17.645%; }   /* 2025 */
+.timeline-labels span:nth-child(3) { left: 33.8%; }   /* 2027 */
+.timeline-labels span:nth-child(4) { left: 58%; }   /* 2030 */
+.timeline-labels span:nth-child(5) { left: 98.45%; }       /* 2035 */
+
+/* Label Markers */
+.timeline-labels span::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 2px;
+    background-color: #888;
+    bottom: 100%; /* Place line above text */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Timeline Box */
+.timeline-box {
+    position: relative;
+    background: linear-gradient(135deg, #444, #666);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    min-height: 150px;
+    line-height: 1.6;
+    z-index: 1;
+}
+
+.pour-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.pour-box {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+.pour-box:hover {
+    background-color: #e0e0e0;
+}
+
+.pour-box h3 {
+    margin-top: 0;
+}
+
+.pour-box.perceivable {
+    background-color: #4A90E2; /* a darker shade of blue */
+    color: white; /* Ensure the font color is white */
+}
+
+.pour-box.operable {
+    background-color: #4b7bd8; /* bright sky blue */
+}
+
+.pour-box.understandable {
+    background-color: #2a4dad; /* rich medium blue */ 
+}
+
+.pour-box.robust {
+    background-color:  #18366f; /* deep navy blue */
+}
+
+
+.pour-details {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 100px; /* Fixed height */
+    overflow: auto; /* Enables scrolling if content exceeds height */
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.pour-details.active {
+    display: block;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.challenge-title {
+    font-weight: 600;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.challenge-detail {
+    position: relative; /* Ensure positioning context for the button */
+    font-size: 0.9em; /* Reduce text size */
+    background-color: #fff;
+    padding: 15px;
+    padding-bottom: 1px; /* Add padding at the bottom to create space for the button */
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+    min-height: 100px; /* Increase the minimum height */
+}
+
+/* Fix conflicting more-btn styles */
+.more-btn {
+    background: #6AA; /* Less prominent color */
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Smaller padding */
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.6em; /* Slightly larger for better visibility */
+    transition: all 0.3s ease;
+    position: absolute; /* Position the button */
+    bottom: 10px; /* Distance from the bottom */
+    right: 10px; /* Distance from the right */
+    margin-top: 0; /* Reset margin */
+}
+
+.more-btn:hover {
+    background: #666; /* Slightly darker on hover */
+    transform: scale(1.05);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10vh auto; /* Position from the top */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    max-height: 70vh;
+    position: relative; /* Ensure positioning context */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal-text {
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.modal-text p {
+    margin-bottom: 15px;
+}
+
+.modal-text strong {
+    font-weight: 600;
+}

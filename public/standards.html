@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Standards - EAA 2025</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/script.js"></script>
+    <body>
+        <div class="container">
+            <h1>Mandatory Accessibility Standards - EAA 2025</h1>
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="brexit.html">Brexit & UK</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="challenges.html">Challenges</a>
+                <a href="compliance.html">Compliance</a>
+                <a href="legal.html">Legal</a>
+            </div>
+            <div class="summary-box">
+                <p>The European Accessibility Act (EAA) 2025 enforces <strong>WCAG 2.1/2.2 Level AA</strong> standards for all digital services, including news websites, to ensure accessibility for people with disabilities.</p>
+            </div>
+            
+            <h2>Core Principles (POUR)</h2>
+            <div class="pour-grid">
+                <div class="pour-box perceivable" data-target="perceivable">
+                    <h3>Perceivable</h3>
+                </div>
+                <div class="pour-box operable" data-target="operable">
+                    <h3>Operable</h3>
+                </div>
+                <div class="pour-box understandable" data-target="understandable">
+                    <h3>Understandable</h3>
+                </div>
+                <div class="pour-box robust" data-target="robust">
+                    <h3>Robust</h3>
+                </div>
+            </div>
+            
+            <div id="perceivable" class="pour-details">
+                <p><strong>Perceivable:</strong> Information must be available to all users, including those with disabilities. This means providing text alternatives for non-text content, captions for multimedia, and ensuring content can be presented in different ways.</p>
+            </div>
+            <div id="operable" class="pour-details">
+                <p><strong>Operable:</strong> Website navigation and functionality should work via keyboard and assistive devices. Users must be able to navigate, find content, and operate interfaces regardless of their input method.</p>
+            </div>
+            <div id="understandable" class="pour-details">
+                <p><strong>Understandable:</strong> Content must be clear, predictable, and easy to comprehend. Information should be readable, websites should operate in predictable ways, and interfaces should help users avoid and correct mistakes.</p>
+            </div>
+            <div id="robust" class="pour-details">
+                <p><strong>Robust:</strong> Websites must be compatible with current and future assistive technologies. Content must be robust enough to be reliably interpreted by a wide variety of user agents and technologies.</p>
+            </div>
+            
+            <h2>Key WCAG 2.1/2.2 AA Requirements</h2>
+            <ul>
+                <li>Text alternatives for non-text content (e.g., images, charts).</li>
+                <li>Keyboard navigability without requiring a mouse.</li>
+                <li>Sufficient color contrast for readability.</li>
+                <li>Captions for all video and audio content.</li>
+                <li>Clear focus indicators for interactive elements.</li>
+            </ul>
+            <p>Meeting these standards ensures compliance with the EAA and improves accessibility for all users.</p>
+        </div>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const pourBoxes = document.querySelectorAll('.pour-box');
+                const pourDetails = document.querySelectorAll('.pour-details');
+
+                // Show the first detail by default and set its background color to match its box
+                const defaultBox = document.querySelector('.pour-box[data-target="perceivable"]');
+                const perceivableDetail = document.getElementById('perceivable');
+                perceivableDetail.classList.add('active');
+                perceivableDetail.style.backgroundColor = window.getComputedStyle(defaultBox).backgroundColor;
+
+                pourBoxes.forEach(box => {
+                    box.addEventListener('mouseover', function() {
+                        // Hide all details first
+                        pourDetails.forEach(detail => {
+                            detail.classList.remove('active');
+                        });
+                        
+                        // Show the corresponding detail and update its background color
+                        const targetId = this.getAttribute('data-target');
+                        const targetDetail = document.getElementById(targetId);
+                        targetDetail.style.backgroundColor = window.getComputedStyle(this).backgroundColor;
+                        targetDetail.classList.add('active');
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

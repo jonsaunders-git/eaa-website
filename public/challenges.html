@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges in EAA Compliance</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Challenges in EAA Compliance</h1>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="standards.html">Standards</a>
+            <a href="brexit.html">Brexit & UK</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="compliance.html">Compliance</a>
+            <a href="legal.html">Legal</a>
+        </div>
+        <div class="challenges-grid">
+            <div class="challenge-title">Multimedia Content Accessibility</div>
+            <div class="challenge-detail">
+                Ensuring images, videos, and audio content have proper text alternatives and captions is a significant challenge for digital news platforms. Live content, such as breaking news videos, requires real-time captioning solutions.
+                <button class="more-btn" data-modal="modal1">More</button>
+            </div>
+            
+            <div class="challenge-title">Dynamic Content and Live Updates</div>
+            <div class="challenge-detail">
+                Live blogs, real-time updates, and auto-refreshing content can cause issues for screen readers and assistive technologies. Implementing ARIA live regions correctly is crucial.
+                <button class="more-btn" data-modal="modal2">More</button>
+            </div>
+            
+            <div class="challenge-title">Complex Navigation and Site Structure</div>
+            <div class="challenge-detail">
+                News sites often have extensive menus and multiple layers of content. Ensuring keyboard accessibility and logical heading structures is essential to compliance.
+                <button class="more-btn" data-modal="modal3">More</button>
+            </div>
+            
+            <div class="challenge-title">Third-Party Content and Advertisements</div>
+            <div class="challenge-detail">
+                Many news platforms rely on embedded social media content and advertising networks, which may not always be accessible. Choosing accessible ad providers is necessary.
+                <button class="more-btn" data-modal="modal4">More</button>
+            </div>
+            
+            <div class="challenge-title">Legacy Content and Archives</div>
+            <div class="challenge-detail">
+                Older articles and multimedia often lack accessibility features. Retrofitting historical content is time-consuming but required under the EAA by 2030.
+                <button class="more-btn" data-modal="modal5">More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Dialogs -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Multimedia Content Accessibility</h2>
+            <div class="modal-text">
+                <p>News sites often feature a high volume of images, videos, infographics, and audio clips. Ensuring all these media elements have appropriate text alternatives is a significant task. Every photo or chart in an article needs descriptive <strong>alt text</strong>, and all videos (including live-streamed news segments) should have <strong>captions or transcripts</strong> for deaf or hard-of-hearing users.</p>
+                
+                <p>Providing these alternatives in a fast-paced newsroom environment can be challenging – reporters and editors must integrate writing alt descriptions and uploading captions into their workflow. Live content is especially tough: e.g. live video feeds require real-time captioning or sign-language interpretation, which require planning and resources.</p>
+                
+                <p>Under the EAA, <strong>all visual or audio information must be conveyed in an accessible form</strong>, so news organizations need to devise processes (and invest in tools or services) to caption videos and describe images as part of publishing.</p>
+                
+                <p>Failing to provide alt text remains a widespread issue on websites globally. News platforms must overcome the "speed vs. completeness" dilemma by prioritizing accessibility as highly as breaking the story – e.g. publish a short article quickly but update with full captions and descriptions shortly after if necessary.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Dynamic Content and Live Updates</h2>
+            <div class="modal-text">
+                <p>Many digital news outlets provide <strong>live blogs, tickers, or auto-updating feeds</strong> (for example, live election results, sports scores, or breaking news updates that push new content periodically). These dynamic updates can confuse assistive technology if not handled properly – a screen reader user might not be notified of new content, or focus might move unpredictably.</p>
+                
+                <p>Making live-updating content accessible requires careful use of ARIA live regions or polite announcements so that new information is presented to users without disrupting their reading. It's a technical challenge to ensure that any auto-refreshing content does not disorient users or become unreachable via keyboard.</p>
+                
+                <p>Similarly, features like infinite scroll (common on news sites to continuously load more articles) need to be implemented in an accessible way (with proper region markers and the ability to navigate via headings or pagination).</p>
+                
+                <p><strong>Timing issues</strong> can also arise – for example, if a site uses rotating carousels or slideshows for top stories, users must have controls to pause or manually navigate them to meet operability guidelines. Managing these interactive and time-sensitive elements in compliance with WCAG can be complex, and often requires custom development and thorough testing.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Complex Navigation and Site Structure</h2>
+            <div class="modal-text">
+                <p>News websites typically have <strong>complex navigation systems</strong> with multiple levels of menus, sections, and categorization. This complexity poses significant accessibility challenges: all navigation elements must be operable via keyboard, properly labeled for screen readers, and logically structured.</p>
+                
+                <p>Dropdown menus, hamburger navigations on mobile, and mega-menus common to news sites must use proper ARIA attributes and keyboard focus management. For example, a keyboard user should be able to open a dropdown, navigate through its options, and return to the main navigation without getting trapped.</p>
+                
+                <p>The <strong>overall site structure</strong> should follow a clear heading hierarchy (H1, H2, etc.) that makes logical sense - many news sites fail this by using headings for visual styling rather than structural organization. Screen reader users rely heavily on proper heading structure to understand page organization and navigate efficiently.</p>
+                
+                <p>For news sites with segmented or paginated articles, there must be clear, accessible controls to move between pages or sections. Search functionality needs to be easily findable and operable without a mouse. Skip navigation links should allow users to bypass repetitive navigation elements.</p>
+                
+                <p>These navigation requirements can be challenging to implement when a site has evolved over many years and has complex templates serving different content types (breaking news, feature stories, opinion pieces, etc.). All these must maintain accessibility while preserving the site's visual brand and user experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Third-Party Content and Advertisements</h2>
+            <div class="modal-text">
+                <p>Digital news sites frequently <strong>embed content from third parties</strong> – social media posts, video players from external sources, interactive elements like maps, and advertising networks. This creates a significant accessibility challenge because these elements are often outside the direct control of the news site developers.</p>
+                
+                <p>Advertisements are particularly problematic. Ad networks may deliver content that fails accessibility standards (e.g., ads with rapidly flashing content, unlabeled interactive elements, or poor contrast ratios). Under the EAA, news organizations cannot simply blame third-party providers – they bear responsibility for ensuring <strong>all content on their site, including ads</strong>, meets accessibility requirements.</p>
+                
+                <p>Social media embeds (e.g., Twitter/X feeds or Facebook posts) might lack proper semantic structure, keyboard accessibility, or appropriate text alternatives. News sites must either work with platforms to ensure their embed codes meet standards, or create accessible alternatives to display this third-party content.</p>
+                
+                <p>The practical solution often involves a combination of approaches: vetting ad providers for accessibility compliance, implementing fallbacks for inaccessible third-party widgets, negotiating with partners about accessibility requirements, and in some cases, creating custom accessible wrappers around third-party content.</p>
+                
+                <p>Some news organizations are moving toward <strong>reservation of specific display space</strong> for ads, with strict requirements for what can be displayed there, giving them more control over accessibility compliance. For embedded content like YouTube videos or social media posts, news sites should ensure proper keyboard controls are maintained and that screen reader users can access the content or an equivalent alternative.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Legacy Content and Archives</h2>
+            <div class="modal-text">
+                <p>News organizations often maintain extensive <strong>archives of historical content</strong>, sometimes dating back decades. These archives can contain thousands of articles, images, videos, and interactive features that were created before accessibility standards were widely adopted or required.</p>
+                
+                <p>The EAA recognizes this challenge by establishing a <strong>longer timeline for legacy content</strong>. While new content must be accessible by June 2025, existing content only needs to comply by 2030. However, this still represents a significant undertaking for news sites with vast repositories of historical material.</p>
+                
+                <p>Retrofitting accessibility features onto legacy content presents several challenges:</p>
+                
+                <ul>
+                    <li><strong>Scale:</strong> News sites may have hundreds of thousands of archived articles and media files requiring updates</li>
+                    <li><strong>Technical debt:</strong> Content may exist in legacy CMS systems or outdated formats that are difficult to modify</li>
+                    <li><strong>Missing assets:</strong> Original images or video files might be unavailable for adding descriptions or captions</li>
+                    <li><strong>Resource constraints:</strong> Manually reviewing and remediating years of content requires significant staff time</li>
+                </ul>
+                
+                <p>Some organizations are adopting a <strong>phased approach</strong>, prioritizing the most frequently accessed archive content first. Others are exploring automated solutions like AI-generated image descriptions, though these require human verification for accuracy.</p>
+                
+                <p>The dilemma many face is whether to invest heavily in remediating old content or to replace legacy systems entirely with new, accessible infrastructure. Both approaches require significant investment, but front-loading accessibility into new systems may be more cost-effective long-term than continually patching old ones.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modals = document.querySelectorAll('.modal');
+            const moreBtns = document.querySelectorAll('.more-btn');
+            const closeBtns = document.querySelectorAll('.close');
+
+            // Function to open modal
+            function openModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            }
+
+            // Function to close modal
+            function closeModal(modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+
+            // Add click event listener to each "More" button
+            moreBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default button behavior
+                    const modalId = this.getAttribute('data-modal');
+                    openModal(modalId);
+                });
+            });
+
+            // Add click event listener to each close button
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    closeModal(this.closest('.modal'));
+                });
+            });
+
+            // Close modal when clicking outside of it
+            window.addEventListener('click', function(event) {
+                if (event.target.classList.contains('modal')) {
+                    closeModal(event.target);
+                }
+            });
+
+            // Close modal with ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    modals.forEach(modal => {
+                        if (modal.style.display === 'block') {
+                            closeModal(modal);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

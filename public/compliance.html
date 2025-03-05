@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAA 2025 Compliance Guide</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>EAA 2025 Compliance Guide</h1>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="standards.html">Standards</a>
+            <a href="brexit.html">Brexit & UK</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="challenges.html">Challenges</a>
+            <a href="legal.html">Legal</a>
+        </div>
+        
+        <div class="summary-box">
+            <p>The European Accessibility Act (EAA) requires all digital services to be fully accessible by 2025 (new services) and 2030 (existing ones). Follow these steps to ensure compliance:</p>
+        </div>
+
+        <div class="callout">
+            <h3>1. Conduct an Accessibility Audit</h3>
+            <p>Evaluate your website against WCAG 2.1/2.2 AA standards. Use automated tools like <a href="https://wave.webaim.org/" target="_blank">WAVE</a> and manual testing with screen readers.</p>
+            <button class="more-btn" data-modal="modal1">More</button>
+        </div>
+        
+        <div class="callout">
+            <h3>2. Implement Required Fixes</h3>
+            <p>Fix non-compliant elements such as contrast issues, missing alternative text, keyboard navigability, and incorrect ARIA attributes.</p>
+            <button class="more-btn" data-modal="modal2">More</button>
+        </div>
+        
+        <div class="callout">
+            <h3>3. Publish an Accessibility Statement</h3>
+            <p>Provide a public statement detailing your compliance efforts and how users can report accessibility issues. Example templates are available at <a href="https://www.w3.org/WAI/planning/statements/" target="_blank">W3C Accessibility Statements</a>.</p>
+            <button class="more-btn" data-modal="modal3">More</button>
+        </div>
+        
+        <div class="callout">
+            <h3>4. Train Your Team</h3>
+            <p>Ensure your developers, designers, and content creators understand accessibility best practices. Regular training is essential to maintain compliance.</p>
+            <button class="more-btn" data-modal="modal4">More</button>
+        </div>
+        
+        <div class="callout">
+            <h3>5. Establish Ongoing Monitoring</h3>
+            <p>Accessibility is a continuous process. Conduct regular audits, collect user feedback, and update accessibility features as technology evolves.</p>
+            <button class="more-btn" data-modal="modal5">More</button>
+        </div>
+        
+        <h2>Key Compliance Benefits</h2>
+        <ul>
+            <li>Prevents legal penalties and ensures uninterrupted access to the EU market.</li>
+            <li>Enhances user experience and expands audience reach.</li>
+            <li>Demonstrates corporate social responsibility and inclusivity.</li>
+        </ul>
+    </div>
+
+    <!-- Modal Dialogs -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Conduct an Accessibility Audit</h2>
+            <div class="modal-text">
+                <p>Evaluate your website against WCAG 2.1/2.2 AA standards. Use automated tools like <a href="https://wave.webaim.org/" target="_blank">WAVE</a> and manual testing with screen readers.</p>
+                <p>Automated tools can help identify common issues such as missing alt text, contrast errors, and improper use of ARIA attributes. However, manual testing is essential to catch issues that automated tools might miss, such as keyboard navigability and screen reader compatibility.</p>
+                <p>Regular audits ensure that your website remains compliant as new content is added and as accessibility standards evolve.</p>
+                <p>In practice, this means digital news platforms should conform to recognized standards equivalent to WCAG 2.1/2.2 Level AA for their web content. WCAG Level AA is effectively “where the EAA wants you to be,” setting the baseline for EU compliance by 2025.</p>
+                <p>To guide compliance, the EU will publish harmonised standards (such as an updated EN 301 549, which is based on WCAG) – any website meeting these technical standards will be presumed to conform to the EAA’s requirements.</p>
+                <p>In summary, news websites serving EU users should be built and maintained to WCAG 2.1+ AA criteria (e.g. text alternatives for non-text content, keyboard navigability, sufficient color contrast, captions on videos, etc.), ensuring content is perceivable, operable, understandable and robust for all users.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Implement Required Fixes</h2>
+            <div class="modal-text">
+                <p>Fix non-compliant elements such as contrast issues, missing alternative text, keyboard navigability, and incorrect ARIA attributes.</p>
+                <p>Ensure that all images have descriptive alt text, all interactive elements are keyboard accessible, and that ARIA attributes are used correctly to enhance accessibility for screen reader users.</p>
+                <p>Addressing these issues promptly helps prevent accessibility barriers for users with disabilities and ensures compliance with the EAA.</p>
+                <p>Here are some specific steps to implement required fixes:</p>
+                <ul>
+                    <li><strong>Contrast Issues:</strong> Ensure that text and background colors have sufficient contrast to be readable by users with visual impairments. Use tools like the <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a> to verify contrast ratios.</li>
+                    <li><strong>Alternative Text:</strong> Provide descriptive alt text for all images, ensuring that screen reader users can understand the content and purpose of each image.</li>
+                    <li><strong>Keyboard Navigability:</strong> Ensure that all interactive elements (e.g., links, buttons, forms) are accessible via keyboard. Users should be able to navigate through the website using the Tab key and activate elements using the Enter or Space keys.</li>
+                    <li><strong>ARIA Attributes:</strong> Use ARIA (Accessible Rich Internet Applications) attributes correctly to enhance the accessibility of dynamic content and interactive elements. Ensure that ARIA roles, states, and properties are used appropriately to convey information to screen readers.</li>
+                </ul>
+                <p>By addressing these issues, you can create a more inclusive and accessible website that complies with the EAA and provides a better user experience for all visitors.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Publish an Accessibility Statement</h2>
+            <div class="modal-text">
+                <p>Provide a public statement detailing your compliance efforts and how users can report accessibility issues. Example templates are available at <a href="https://www.w3.org/WAI/planning/statements/" target="_blank">W3C Accessibility Statements</a>.</p>
+                <p>An accessibility statement demonstrates your commitment to accessibility and provides transparency about your efforts. It should include contact information for users to report issues and a summary of the steps you have taken to ensure accessibility.</p>
+                <p>Regularly updating the statement ensures that it reflects the current state of your website's accessibility and any ongoing efforts to improve it.</p>
+                <p>Here are some key elements to include in your accessibility statement:</p>
+                <ul>
+                    <li><strong>Commitment to Accessibility:</strong> A clear statement of your organization's commitment to ensuring digital accessibility for all users, including those with disabilities.</li>
+                    <li><strong>Standards and Guidelines:</strong> Information about the accessibility standards and guidelines your website follows, such as WCAG 2.1/2.2 AA.</li>
+                    <li><strong>Accessibility Features:</strong> A description of the accessibility features implemented on your website, such as text alternatives for non-text content, keyboard navigability, and sufficient color contrast.</li>
+                    <li><strong>Contact Information:</strong> Provide contact details for users to report accessibility issues or request assistance. Include multiple contact methods, such as email, phone, and a web form.</li>
+                    <li><strong>Feedback Mechanism:</strong> Encourage users to provide feedback on the accessibility of your website and describe how you will address their concerns.</li>
+                    <li><strong>Ongoing Efforts:</strong> Outline your ongoing efforts to maintain and improve accessibility, including regular audits, staff training, and updates to accessibility features.</li>
+                </ul>
+                <p>By including these elements in your accessibility statement, you can demonstrate your commitment to accessibility and provide users with the information they need to engage with your website effectively.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Train Your Team</h2>
+            <div class="modal-text">
+                <p>Ensure your developers, designers, and content creators understand accessibility best practices. Regular training is essential to maintain compliance.</p>
+                <p>Provide training on topics such as accessible design principles, coding techniques, and content creation. Encourage your team to stay informed about the latest accessibility standards and guidelines.</p>
+                <p>Here are some key areas to focus on when training your team:</p>
+                <ul>
+                    <li><strong>Accessible Design Principles:</strong> Teach your team the principles of accessible design, such as ensuring sufficient color contrast, using clear and simple language, and providing text alternatives for non-text content.</li>
+                    <li><strong>Coding Techniques:</strong> Train developers on coding techniques that enhance accessibility, such as using semantic HTML, ensuring keyboard accessibility, and implementing ARIA roles and attributes correctly.</li>
+                    <li><strong>Content Creation:</strong> Educate content creators on how to produce accessible content, including writing descriptive alt text for images, using headings correctly, and ensuring that multimedia content is accessible through captions and transcripts.</li>
+                    <li><strong>Testing and Evaluation:</strong> Teach your team how to test and evaluate the accessibility of your website using automated tools and manual testing methods, such as screen reader testing and keyboard navigation checks.</li>
+                </ul>
+                <p>By providing comprehensive training on these topics, you can ensure that your team has the knowledge and skills needed to create and maintain an accessible website.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Establish Ongoing Monitoring</h2>
+            <div class="modal-text">
+                <p>Accessibility is a continuous process. Conduct regular audits, collect user feedback, and update accessibility features as technology evolves.</p>
+                <p>Regular monitoring helps identify new accessibility issues that may arise as your website changes and as new technologies are introduced. Encourage users to provide feedback on accessibility and use this feedback to make improvements.</p>
+                <p>Here are some key steps to establish ongoing monitoring:</p>
+                <ul>
+                    <li><strong>Regular Audits:</strong> Schedule regular accessibility audits to identify and address new issues. Use a combination of automated tools and manual testing to ensure comprehensive coverage.</li>
+                    <li><strong>User Feedback:</strong> Implement a feedback mechanism that allows users to report accessibility issues. Actively encourage feedback and use it to make improvements.</li>
+                    <li><strong>Update Accessibility Features:</strong> As technology evolves, update your accessibility features to ensure they remain effective. Stay informed about the latest accessibility standards and best practices.</li>
+                    <li><strong>Training and Awareness:</strong> Continuously train your team on accessibility best practices and raise awareness about the importance of accessibility. Ensure that new team members receive accessibility training as part of their onboarding process.</li>
+                    <li><strong>Documentation:</strong> Maintain thorough documentation of your accessibility efforts, including audit results, user feedback, and updates to accessibility features. Use this documentation to track progress and demonstrate compliance.</li>
+                </ul>
+                <p>By staying proactive and responsive to accessibility needs, you can ensure that your website remains compliant and accessible to all users.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modals = document.querySelectorAll('.modal');
+            const moreBtns = document.querySelectorAll('.more-btn');
+            const closeBtns = document.querySelectorAll('.close');
+
+            // Function to open modal
+            function openModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            }
+
+            // Function to close modal
+            function closeModal(modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+
+            // Add click event listener to each "More" button
+            moreBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default button behavior
+                    const modalId = this.getAttribute('data-modal');
+                    openModal(modalId);
+                });
+            });
+
+            // Add click event listener to each close button
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    closeModal(this.closest('.modal'));
+                });
+            });
+
+            // Close modal when clicking outside of it
+            window.addEventListener('click', function(event) {
+                if (event.target.classList.contains('modal')) {
+                    closeModal(event.target);
+                }
+            });
+
+            // Close modal with ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    modals.forEach(modal => {
+                        if (modal.style.display === 'block') {
+                            closeModal(modal);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
